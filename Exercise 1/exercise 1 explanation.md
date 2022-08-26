@@ -1,17 +1,22 @@
 # MY PERSONAL STEP-BY-STEP PREOCEDURE TO INSTALL Linux OS USING VIRTUAL BOX #
-**This installation/procedure was carried out on my windows 7 Machine**
+**This installation/procedure was carried out on my windows 7 Machine**<br>
 Before I began installation, I had done some research and realized that not all systems  have their virtualization enabled by default.
 Checked my system BIOS and had to enable it from advanced option and saved in order for the system to reboot.
 
-##Now the setup process begins##
-**1. Download and Install your Virtual Box**
+You can now begin the setup process.
+
+**1. Download and Install your Virtual Box**<br>
 Due to the fact that I am more comfortable with Windows, and did not desire to permanently change my operating system to Linux OS, I decided to host the operating system on a virtual machine.
 Go to google and download the virtual box suitable for windows version which is ```x86/amd64``` and start the download.
 When it is done, it will appear as a Oracle VM virtual Box Manager, based on the version I chose.
 The User Account Control is then prompted asking if you want the file to make changes to your system, of which you click the option ```YES```
 Give the virtual machine whatever name you have in mind, something descriptive, create a folder for the machine that you can easily have access to located on the RAM of your local machine, and choose Ubuntu (64-bit) as the type of Operating System (OS) amongst the several options present.
 
+```
 
+
+
+```
 
 
 
