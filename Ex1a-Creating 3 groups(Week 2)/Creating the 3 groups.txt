@@ -1,6 +1,0 @@
-vagrant@ubuntu-focal:/$ sudo groupadd admin
-vagrant@ubuntu-focal:/$
-vagrant@ubuntu-focal:/$ sudo groupadd support
-vagrant@ubuntu-focal:/$
-vagrant@ubuntu-focal:/$ sudo groupadd engineering
-vagrant@ubuntu-focal:/$
