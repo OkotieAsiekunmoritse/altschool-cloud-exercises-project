@@ -3,8 +3,14 @@
 This command is used to display a calendar on the system, showcasing the specified month or year
 
 ```
-![cal png](https://user-images.githubusercontent.com/108562214/186862527-10ddf9ed-d5b6-4c0d-9136-b3b39375fd30.png)
-
+vagrant@ubuntu-focal:~$ cal
+    August 2022
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
 ```
 **2. cat /proc/cpuinfo**<br>
 This command is used to display all information,and every other command and utility gets its output from this file.
