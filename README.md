@@ -1,1 +1,1 @@
- All completed versions of my altschool-cloud-exercises-project
+ All my exercises for my altschool-cloud-exercises-project
