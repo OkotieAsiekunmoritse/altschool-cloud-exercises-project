@@ -1,4 +1,4 @@
-vagrant@ubuntu-focal:~$  /etc/group
+
 root:x:0:
 daemon:x:1:
 bin:x:2:
