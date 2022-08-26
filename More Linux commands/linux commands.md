@@ -12,6 +12,11 @@ Su Mo Tu We Th Fr Sa
 21 22 23 24 25 26 27
 28 29 30 31
 ```
+```
+![cal png](https://user-images.githubusercontent.com/108562214/186906859-93bda20f-7f1f-43f7-8239-db6d4194751a.png)
+
+```
+
 **2. cat /proc/cpuinfo**<br>
 This command is used to display all information,and every other command and utility gets its output from this file.
 
@@ -69,6 +74,9 @@ cache_alignment : 64
 address sizes   : 39 bits physical, 48 bits virtual
 power management:
 ```
+```
+![catproccpuinfo](https://user-images.githubusercontent.com/108562214/186907210-7911b0dd-98b8-4db7-b36d-75a63ee103a7.png)
+```
 
 **3. dig**<br>
 This command can be for querying DNS nameservers for information about host, mail exchanges, nameservers, and related information. It can be used from any Linux(Unix) or Macintosh operatins system. The most typical use of dig is to simply query a single host.
@@ -93,6 +101,11 @@ vagrant@ubuntu-focal:~$ dig domain
 ;; MSG SIZE  rcvd: 35
 ```
 
+```
+![dig domain](https://user-images.githubusercontent.com/108562214/186907129-9d606b86-3f55-40e3-8aea-08e56fbb84a1.png)
+
+```
+
 **4. w**<br>
 This commands is a built-in tool that allows administrators to view information about users that are currently logged in. This includes their username, where they are logged in from, and what they are currently doing.
 ```
@@ -101,6 +114,10 @@ vagrant@ubuntu-focal:~$ w
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
 vagrant  pts/0    10.0.2.2         17:07    0.00s  0.26s  0.00s w
 ```
+```
+![w png](https://user-images.githubusercontent.com/108562214/186907339-3d257610-4d35-4c21-b5c5-d30c65aec7d2.png)
+```
+
 **5. netstat**<br>
 The command  network statistics ( netstat ) command is a networking tool used for troubleshooting and configuration, that can also serve as a monitoring tool for connections over the network. Both incoming and outgoing connections, routing tables, port listening, and usage statistics are common uses for the command.
 
@@ -209,6 +226,9 @@ unix  3      [ ]         STREAM     CONNECTED     21765
 unix  3      [ ]         STREAM     CONNECTED     20681    /run/systemd/journal/stdout
 
 ```
+```
+![netstat](https://user-images.githubusercontent.com/108562214/186907438-d2099bad-4bfd-4492-abc7-4b42129efe17.png)
+```
 
 **6. lspci**<br>
 The command lspci (list PCI) Linux command displays information about each PCI bus on a system. This includes information about the devices connected to the PCI subsystem.
@@ -226,6 +246,10 @@ vagrant@ubuntu-focal:~$ lspci -tv
            +-08.0  Intel Corporation 82540EM Gigabit Ethernet Controller
            \-14.0  Broadcom / LSI 53c1030 PCI-X Fusion-MPT Dual Ultra320 SCSI``
 
+```
+
+```
+![lspci-tv](https://user-images.githubusercontent.com/108562214/186907546-4d25dd1b-b4a7-445c-972a-01b01392ad0b.png)
 ```
 
 **7. Ip**<br>
@@ -251,6 +275,11 @@ vagrant@ubuntu-focal:~$ ip a
        valid_lft 428sec preferred_lft 428sec
     inet6 fe80::a00:27ff:fe97:dfb0/64 scope link
        valid_lft forever preferred_lft forever
+
+```
+
+```
+![ip  a](https://user-images.githubusercontent.com/108562214/186907688-46265e3b-82be-423b-8064-fd6a6c477679.png)
 
 ```
 
