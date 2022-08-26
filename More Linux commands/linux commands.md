@@ -3,8 +3,7 @@
 This command is used to display a calendar of the specified month or year.
 
 ```
-![okotie@ubuntu-focal:~$ cal](https://github.com/OkotieAsiekunmoritse/altschool-cloud-exercises-project/blob/3474b4983adf331d90f0a8d5d9635947e8375d3d/More%20Linux%20commands/cal.png.png
-)
+![cal png](https://user-images.githubusercontent.com/108562214/186862527-10ddf9ed-d5b6-4c0d-9136-b3b39375fd30.png)
 
 ```
 
