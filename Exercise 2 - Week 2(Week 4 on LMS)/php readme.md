@@ -1,6 +1,8 @@
 ## How I Installed my PHP 7.4 version on my Ubuntu 20.04 ##
 Follow me on another interesting journey as I install PHP version 7.4 on my Ubuntu local environment.<br>
-First off, I cannot deny that I did some research and finally realized how to go about this process, these were the steps I took:<br>
+Although, I had earlier installed before creating this,hence the last step says the PHP 7.4 is already the newest version. But I just want to share with you what your outcome should look like.<br>
+
+Also, I cannot deny that I did some research and finally realized how to go about this process, these were the steps I took:<br>
 **Step 1**<br>
 Started the process on my command prompt, were I ran the command ``` sudo apt-get``` to update itself<br> and it produced the outcome below:<br>
 
@@ -95,8 +97,8 @@ vagrant@ubuntu-focal:~$ sudo apt -y install php7.4
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
-php7.4 is the newest version (1:7.4.30-5+ubuntu20.04.1+deb.sury.org+1).
-0 upgraded, 1 newly installed, 0 to remove and 16 not upgraded.
+php7.4 is already the newest version (1:7.4.30-5+ubuntu20.04.1+deb.sury.org+1).
+0 upgraded, 0 newly installed, 0 to remove and 16 not upgraded.
 ```
 
 That was how I successfuly installed.
