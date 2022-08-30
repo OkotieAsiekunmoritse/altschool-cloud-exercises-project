@@ -1,4 +1,4 @@
-vagrant@ubuntu-focal:~$ cat /etc/apt/sources.list
+
 ## Note, this file is written by cloud-init on first boot of an instance
 ## modifications made here will not survive a re-bundle.
 ## if you wish to make changes you can:
