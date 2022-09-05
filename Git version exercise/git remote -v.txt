@@ -1,5 +1,0 @@
-
-vagrant@ubuntu-focal:~/altschool-cloud-exercises-project$ git remote set-url origin https://gitlab.com/Mo_itse
-vagrant@ubuntu-focal:~/altschool-cloud-exercises-project$ git remote -v
-origin  https://gitlab.com/Mo_itse (fetch)
-origin  https://gitlab.com/Mo_itse (push)
