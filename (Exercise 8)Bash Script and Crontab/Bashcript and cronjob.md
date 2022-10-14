@@ -16,4 +16,4 @@ Then you are free to run your script with the command: ```./<file_name>```
 Below is a screenshot of what my bash script for this task looked like:
 <img src="C:\Users\Media\altschool-cloud\Git version exercise\First bash script.PNG" alt="First bash script" style="height: 100px; width:100px;"/>
 
-![alt text](
+![alt text]((Exercise 8)Bash Script and Crontab/First bash script.PNG
