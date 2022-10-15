@@ -58,9 +58,20 @@ This is were you add yor mail address again<br>
 This is were I added the password from my gmail application. (Note that your gmail account password and the gmail application password are very different, also ensure you have done your 2 step verification for your account. I encountered some issues because I thought both passwords were the same. I had to go online to browse on how to create a gmail application password, and followed the necessary steps as guided by google.)<br>
 <br>
 The screenshot below shows the steps I followed to achieve this<br>
-![Creating a gmail app passwd](https://user-images.githubusercontent.com/108562214/195995456-6efda6cc-3f63-4df7-81a1-aa740122e37e.PNG)<br>
-<br>
+![Creating a gmail app passwd](https://user-images.githubusercontent.com/108562214/195995676-0a0f07a0-401b-4734-8237-8198f00b1707.PNG)<br>
 
+<br>
+* Use TLS<br>
+TLS which means ```Transport Layer Security``` is very much needed as it encrypts data sent over the internet to ensure that hackers are unable to see what you transmit.It is useful for confidential and sensitive information like passwords, credit card numbers, amongst others.<br>
+Set and enable the TLS feature to ```YES```.<br>
+<br>
+* Use STARTTLS<br>
+Ensure you enable the STARTTLS to ```YES``` as well.<br>
+<br>
+* FromLine Override<br>
+Ensure that you enable this to ```YES``` as well.<br>
+<br>
+Save all the editing done by overwriting it with ```ctrl O```, then save and exit the file.<br>
 
 
 
