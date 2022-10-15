@@ -35,14 +35,32 @@ These installations I did to ensure all related processes run effectively when c
 On your command line, run ```nano /etc/sstmp/sstmp.conf```<br>
 This I did, to enable me edit my Secure Simple Mail Transfer Protocol configuration to suit my mail properties.<br>
 So, note that after installing the mail packages like we did earlier, the nano file is also created instantly, so there would be a default nano ssmtp file already inyour system after installation.<br>
-After changing the default propertries to my personal mail properties, the screenshot below shows what I finally had:
-![etc_ssmtp_ssmtp_conf](https://user-images.githubusercontent.com/108562214/195994202-8b2dc6b7-31f7-4b8f-a8cf-1846dda42fce.PNG)
-I changed and included the following into the nano file:<br>
-The root<br>
+After changing the default propertries to my personal mail properties, the screenshot below shows what I finally had:<br>
+![etc_ssmtp_ssmtp_conf](https://user-images.githubusercontent.com/108562214/195994202-8b2dc6b7-31f7-4b8f-a8cf-1846dda42fce.PNG)<br>
+<br>
+I changed the following in the nano file:<br>
+<br>
+* The root<br>
 The default root was changed from ```postmaster``` to my ```personal gmail account```.(Note that I used a gmail account for this procedure)<br>
+<br>
+* The mailhub<br>
+I changed the default mailhub from ```mail``` to ```smtp.gmail.com:465<br>
+<br>
+* The hostname<br>
+I changed the hostname from ```main``` to my system hostname.<br>
+<br>
+<br>
+The following were added to the nano file:<br>
+* AuthUser<br>
+This is were you add yor mail address again<br>
+<br>
+* Authpass<br>
+This is were I added the password from my gmail application. (Note that your gmail account password and the gmail application password are very different, also ensure you have done your 2 step verification for your account. I encountered some issues because I thought both passwords were the same. I had to go online to browse on how to create a gmail application password, and followed the necessary steps as guided by google.)<br>
+<br>
+The screenshot below shows the steps I followed to achieve this<br>
+![Creating a gmail app passwd](https://user-images.githubusercontent.com/108562214/195995456-6efda6cc-3f63-4df7-81a1-aa740122e37e.PNG)<br>
+<br>
 
-The mailhub<br>
-I changed the default mailhub from ```mail``` to ```smtp.gmail.com:456
 
 
 
