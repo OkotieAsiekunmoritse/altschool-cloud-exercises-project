@@ -146,6 +146,8 @@ In the email bash script:<br>
 ![cronjob](https://user-images.githubusercontent.com/108562214/196011030-d120cced-4cd6-43b3-ab15-884238048c95.PNG)<br>
 The first instruction simply points to our bash script and instructs that it should be executed “At minute 0” of every hour of every day of the month, every month and evry day of the week.<br>
 The second instruction instructs the script that it should be executed "At minute 0, and hour 0" of everyday of the month, every month and every day of the week.<br>
+![Email Report1](https://user-images.githubusercontent.com/108562214/196011347-f991bc23-98c2-43eb-9c4a-93567d68f0a2.PNG)<br>
+I recieved my mail at the set time specified with the content in the body as specified as well.
 
 
  
