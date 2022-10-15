@@ -72,6 +72,12 @@ Ensure you enable the STARTTLS to ```YES``` as well.<br>
 Ensure that you enable this to ```YES``` as well.<br>
 <br>
 Save all the editing done by overwriting it with ```ctrl O```, then save and exit the file.<br>
+<br>
+<br>
+Test what you have done by sending yourself a test email. I di this by running the command ```echo "Hey Mo!" | mail -s "Hey girl" your mail address```<br>
+Where ```echo``` is the command that sends ```Hey Mo``` as the content of the mail, ```-s``` refers to the sublect of the mail which in this case is ```Hey girl```, then my email address.<br>
+<br>
+![test email](https://user-images.githubusercontent.com/108562214/195996976-1135e171-2f95-4e59-bc8c-d65c7a48a388.PNG)
 
 
 
