@@ -52,5 +52,9 @@ Here is a screenshot of what my .yml file looks like:<br>
 <br>
 To avoid errors and hitches along the final execution process, check to see that all syntax rules in the playbook were obeyed and to check that the instructions given will run eventually. <br>
 Use the command: ``` ansible-playbook filename.yml -i name of file containing ip address --check```<br>
+The run the actual process with the same command but withou the ```--check```<br>
+This screenshot below is what I got after I ran the check and nothing was wrong, I then did the actual execution.<br>
+<br>
+
 
 
