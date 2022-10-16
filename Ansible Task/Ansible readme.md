@@ -45,54 +45,12 @@ So,ensure that ```.yml``` is included at the end of whatever name you decide to 
 There is also a specified syntax for beginning a yml file and the writeup must be in a uniformed line all through.<br>
 A yml file must beggin with ```---``` for the first line and ```-``` on the second line, before you begin writing your instructions.<br>
 Here is a look at what my .yml file looks like:<br>
-```
----
--  name: Setup Web Server
-   hosts: all
-   become: true
-   become_method: sudo
 
-   tasks:
-     - name: Install latest version of Apache2
-       apt:
-         name: apache2
-         update_cache: yes
-         state: latest
 
-     - name: Start Apache2
-       service:
-         name: apache2
-         enabled: yes
-         state: started
+![playbook content 1](https://user-images.githubusercontent.com/108562214/196054266-552d268f-a6c6-49c6-9d7a-9aa6a79552c7.PNG)
 
-     - name: Status of Apache2
-       command: systemctl status apache2
+![playbook content 1(cont'd)](https://user-images.githubusercontent.com/108562214/196054563-24a6a9e0-1221-49ce-9cf8-971ed4e4702a.PNG)
 
-     - name: Add repository ppa:ondrej/php
-       apt_repository:
-             repo: "ppa:ondrej/php"
-             state: present
-
-     - name: Install php7.4
-       apt:
-         name: php7.4
-         state: present
-
-     - name: Set timezone
-       command: timedatectl set-timezone Africa/Lagos
-
-     - name: Copy index.php file to target machine
-       copy:
-         dest: /var/www/html/index.php
-         content: |
-                  <?php
-                  date_default_timezone_set("Africa/Lagos");
-                  echo date("F d, Y h:i:s A e", time());
-                  ?>
-```
-
-<br>
-![playbook content 1](https://user-images.githubusercontent.com/108562214/196012378-dd895bfb-a959-4e10-a72b-a1a6a6740029.PNG)
 <br>
 
 * Test run the playbook<br>
@@ -103,40 +61,17 @@ The run the actual process with the same command but withou the ```--check```<br
 This screenshot below is what I got after I ran the check and nothing was wrong, I then did the actual execution.<br>
 <br>
 
-```vagrant@ubuntu-focal:~/ansible$ ansible-playbook setup.yml -i host-inventory
-
-PLAY [Setup Web Server] **********************************************************************************************
-
-TASK [Gathering Facts] ***********************************************************************************************
-ok: [192.168.56.8]
-
-TASK [Install latest version of Apache2] *****************************************************************************
-ok: [192.168.56.8]
-
-TASK [Start Apache2] *************************************************************************************************
-ok: [192.168.56.8]
-
-TASK [Status of Apache2] *********************************************************************************************
-changed: [192.168.56.8]
-
-TASK [Add repository ppa:ondrej/php] *********************************************************************************
-ok: [192.168.56.8]
-
-TASK [Install php7.4] ************************************************************************************************
-ok: [192.168.56.8]
-
-TASK [Set timezone] **************************************************************************************************
-changed: [192.168.56.8]
-
-TASK [Copy index.php file to target machine] *************************************************************************
-ok: [192.168.56.8]
-
-PLAY RECAP ***********************************************************************************************************
-```192.168.56.8               : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+![ansible-playbook](https://user-images.githubusercontent.com/108562214/196054129-307a7f75-f518-4718-b3b7-41d64c7ae594.PNG)<br>
 
 
-<br>
-![ansible-playbook](https://user-images.githubusercontent.com/108562214/196013318-1dede984-9324-4752-8a6d-0a3afb006538.PNG)
+
+* Check the ipaddress to see if it works<br>
+Inout the Ip address of your second machine into your google browser to see whether the default page of Papache 2 Ubuntu, comes up just like the way mine did from the screenshot below.<br>
+![Apache2 ubuntu default page](https://user-images.githubusercontent.com/108562214/196053984-7e491bc9-3998-4015-b65b-cc36b7a4a4ca.PNG)<br>
+
+
+* Check the ip address with the index.php to see if the set time zone of Afica/Lagos is displayed just like the screenshot below<br>
+![Rendered page](https://user-images.githubusercontent.com/108562214/196054466-17e23986-69e1-4b94-925a-007e8410f214.PNG)
 
 
 
