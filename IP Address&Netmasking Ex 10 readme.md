@@ -141,7 +141,7 @@ Maximum Number of hosts = 2^(32 - 29) - 2 <br>
 Maximum Number of hosts = 6 <br>
 The number of hosts that can be asigned IP's on the network is ``` 6 ```. <br>
 
-### Calculating the Broadcast IP ###
+## Calculating the Broadcast IP ##
 
 When calculating for the broadcast IP, note that the host bits of the subnet value are first converted to 1's, and network bits are converted to 0's.<br>
  29 =  11111111.11111111.11111111.11111000 (old subnet value) <br>
@@ -163,7 +163,7 @@ Convert the value got from the logical OR operation to its decimal value in orde
 Therefore:<br>
 The Broadcast IP of ``` 193.16.20.35/29 is 193.16.20.39 ``` <br><br>
 
-### Calculating for the Range of IP Addresses ###
+## Calculating for the Range of IP Addresses ##
 
 The range of IP addresses that can be assigned to the hosts can be located between the value of the Network IP and the Broadcast IP i.e 193.16.20.32 - 193.16.20.39.,br>
 
