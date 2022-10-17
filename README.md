@@ -46,9 +46,22 @@ Instruction: <br>
 It consists of the following: <br>
 Task: Create a bash script to run at every hour, saving system memory (RAM) usage to a specified file and at midnight it sends the content of the file to a specified email address, then starts over for the new day. <br><br>
 Instruction:<br>
-**Submit the content of your script, cronjob and a sample of the email sent, all in the folder for this exercise.**
+**Submit the content of your script, cronjob and a sample of the email sent, all in the folder for this exercise.** <br><br>
 
-* Exercise 9 --- I gave it the title ``` 
+* Exercise 9 --- I gave it the title ``` Ansible Task ```<br> 
+It consists of the following: <br>
+Task: Create an Ansible Playbook to setup a server with Apache <br>
+The server should be set to the Africa/Lagos Timezone <br>
+Host an index.php file with the following content, as the main file on the server: <br>
+```
+<?php 
+date("F d, Y h:i:s A e", time());
+?>
+
+```
+<br>
+Instruction:<br>
+**Submit the Ansible playbook, the output of systemctl status apache2 after deploying the playbook and a screenshot of the rendered page.** <br><br>
 
 
 
