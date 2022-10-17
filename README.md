@@ -60,7 +60,7 @@ date("F d, Y h:i:s A e", time());
 
 ```
 <br>
-Instruction:<br>
+Instruction: <br>
 **Submit the ansible playbook, the output of systemctl status apache2 after deploying the playbook and a screenshot of the rendered page** <br><br>
 
 * Exercise 10 --- I gave it the title ``` IP Address&Netmasking Exercise10 readme.md ``` <br>
