@@ -46,7 +46,7 @@ Instruction: <br>
 It consists of the following: <br>
 Task: Create a bash script to run at every hour, saving system memory (RAM) usage to a specified file and at midnight it sends the content of the file to a specified email address, then starts over for the new day. <br><br>
 Instruction:<br>
-**Submit the content of your script, cronjob and a sample of the email sent, all in the folder for this exercise.** <br><br>
+**Submit the content of your script, cronjob and a sample of the email sent, all in the folder for this exercise** <br><br>
 
 * Exercise 9 --- I gave it the title ``` Ansible Task ```<br> 
 It consists of the following: <br>
@@ -61,8 +61,16 @@ date("F d, Y h:i:s A e", time());
 ```
 <br>
 Instruction:<br>
-**Submit the Ansible playbook, the output of systemctl status apache2 after deploying the playbook and a screenshot of the rendered page.** <br><br>
+**Submit the Ansible playbook, the output of systemctl status apache2 after deploying the playbook and a screenshot of the rendered page** <br><br>
 
+
+* Exercise 10 --- I gave it the title ``` IP Address&Netmasking Exercise10 readme.md ``` <br>
+It consists of the following: <br>
+Task: <br>
+193.16.20.35/29 <br>
+What is the Network IP, number of hosts, range of IP addresses and broadcast IP from this subnet? <br><br>
+Instruction: <br> 
+**Submit all your answer as a markdown file in the folder for this exercise**
 
 
 
