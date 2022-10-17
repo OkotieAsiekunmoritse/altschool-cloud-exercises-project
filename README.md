@@ -24,11 +24,21 @@ Generate SSH keys for the user in the admin group <br><br>
 Instruction: <br>
 **Submit the contents of /etc/passwd, /etc/group, /etc/sudoers** <br><br>
 
-* Exercise 4 --- I gave it the title ``` Exercise 2-Week 2(Week 4 on LMS) ```
+* Exercise 4 --- I gave it the title ``` Exercise 2-Week 2(Week 4 on LMS) ``` <br>
 It consists of the following: <br>
 Task: Install PHP 7.4 on your local linux machine using the ppa:ondrej/php package repo. <br><br>
 Instruction: <br>
 Learn how to use the add-apt-repository command<br>
 **Submit the content of /etc/apt/sources.list and the output of php -v command**
 
-* Exercise 5 ---  
+* Exercise 6 --- I gave it the title ``` Git version exercise ``` <br>
+It consists of the following: <br>
+Task: You already have Github account, aso setup a GitLab account if you don’t have one already <br>
+You already have a altschool-cloud-exercises project, clone the project to your local system <br>
+Setup your name and email in Git’s global config <br><br>
+Instruction: <br>
+**Submit the output of:** <br>
+**git config -l** <br>
+**git remote -v** <br>
+**git log** <br>
+
