@@ -1,6 +1,6 @@
  # All Exercises For Altschool-Cloud-Exercises-Project #
  
-## A Breakdown of How Each Exercise was Given and How I Titled them on my Repository ##
+## A Breakdown of Each Exercise and How I Titled them on my Repository ##
 <br>
 
 * Exercise 1 --- I gave it the title ``` Exercise 1 ``` <br>
