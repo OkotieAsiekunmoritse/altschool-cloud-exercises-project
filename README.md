@@ -15,5 +15,11 @@ In my repository, it consists of the following: <br>
 Task: Research online for 10 more linux commands aside the ones already mentioned in this module. Submit using your altschool-cloud-exercises project, explaining what each command is used for with examples of how to use each and example screenshots of using each of them. <br><br>
 Instruction: Submit your work in a folder for this exercise in your altschool-cloud-exercises project. You will need to learn how to embed images in markdown files. <br><br>
 
-* Exercise 3 --- I gave it the title ``` ```
+* Exercise 3 --- I gave it the title ``` Exercise 1-Week 2 ``` <br>
+It consists of the following: <br>
+Create 3 groups – admin, support & engineering and add the admin group to sudoers. <br>
+Create a user in each of the groups. <br>
+Generate SSH keys for the user in the admin group <br><br>
+Instruction: <br>
+Submit the contents of /etc/passwd, /etc/group, /etc/sudoers <br><br>
 
