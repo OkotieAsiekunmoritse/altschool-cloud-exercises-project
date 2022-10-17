@@ -40,5 +40,17 @@ Instruction: <br>
 **Submit the output of:** <br>
 **git config -l** <br>
 **git remote -v** <br>
-**git log** <br>
+**git log** <br><br>
+
+* Exercise 8 --- I gave it the title ```(Exercise 8)Bash Script and Crontab ``` <br>
+It consists of the following: <br>
+Task: Create a bash script to run at every hour, saving system memory (RAM) usage to a specified file and at midnight it sends the content of the file to a specified email address, then starts over for the new day. <br><br>
+Instruction:<br>
+**Submit the content of your script, cronjob and a sample of the email sent, all in the folder for this exercise.**
+
+* Exercise 9 --- I gave it the title ``` 
+
+
+
+
 
