@@ -61,8 +61,7 @@ date("F d, Y h:i:s A e", time());
 ```
 <br>
 Instruction:<br>
-**Submit the Ansible playbook, the output of systemctl status apache2 after deploying the playbook and a screenshot of the rendered page** <br><br>
-
+**Submit the ansible playbook, the output of systemctl status apache2 after deploying the playbook and a screenshot of the rendered page** <br><br>
 
 * Exercise 10 --- I gave it the title ``` IP Address&Netmasking Exercise10 readme.md ``` <br>
 It consists of the following: <br>
@@ -70,7 +69,7 @@ Task: <br>
 193.16.20.35/29 <br>
 What is the Network IP, number of hosts, range of IP addresses and broadcast IP from this subnet? <br><br>
 Instruction: <br> 
-**Submit all your answer as a markdown file in the folder for this exercise**
+**Submit all your answers as a markdown file in the folder for this exercise**
 
 
 
