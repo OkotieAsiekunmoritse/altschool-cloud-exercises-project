@@ -15,6 +15,7 @@ The User Account Control is then prompted asking if you want the file to make ch
 Give the virtual machine whatever name you have in mind, something descriptive, create a folder for the machine that you can easily have access to located on the RAM of your local machine, and choose ```Ubuntu (64-bit)``` as the type of Operating System (OS) amongst the several options present.
 
 
+
 The Ubuntu 20.04 LTS will download in your local machine to ensure that you receive any updates that are given. Any other applications without the LTS will become outdated with time.
 
 **Step 2**<br>
