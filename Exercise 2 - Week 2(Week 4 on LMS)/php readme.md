@@ -11,6 +11,9 @@ Also, I cannot deny that I did some research and finally realized how to go abou
 **Step 1**<br>
 Started the process on my command prompt, were I ran the command ``` sudo apt-get``` to update itself<br> and it produced the outcome below:<br>
 
+![step1](https://user-images.githubusercontent.com/108562214/196836806-8cd418e2-344d-4f41-b952-c3556e9ba1c4.PNG)
+
+
 ```
 vagrant@ubuntu-focal:~$ sudo apt-get update
 Hit:1 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease
@@ -28,6 +31,10 @@ E: Release file for http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRel
 **Step 2**<br>
 I then followed this without another command ``` sudo apt -y install software-properties-common```, which installs software to manage distributions and independent software vendors.
 The ```-y``` flag is incuded because it plays the role of automatically agreeing to do the installation. If the ```-y``` flag is absent, there would be a constant prompt in your terminal window for each installation.
+
+![step 2](https://user-images.githubusercontent.com/108562214/196836895-3c1ce97a-bebc-4fb3-97eb-743e760c5d8f.PNG)
+
+
 ```
 vagrant@ubuntu-focal:~$ sudo apt -y install software-properties-common
 Reading package lists... Done
@@ -40,71 +47,23 @@ software-properties-common is already the newest version (0.99.9.8).
 
 **Step 3**<br>
 Then  I put in the next command ``` sudo add-apt-repository ppa:ondrej/php```, for all versions of your PHP to be displayed
-```
-vagrant@ubuntu-focal:~$ sudo add-apt-repository ppa:ondrej/php
- Co-installable PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included. Only Supported Versions of PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
 
-Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
+![step3](https://user-images.githubusercontent.com/108562214/196837029-b1888747-0a8e-435d-8c70-cd093059b62c.PNG)
 
-You can get more information about the packages at https://deb.sury.org
+![step3b](https://user-images.githubusercontent.com/108562214/196837066-aeeaf44d-9ef6-44bd-bf92-c9e3b9c943e7.PNG)
 
-IMPORTANT: The <foo>-backports is now required on older Ubuntu releases.
 
-BUGS&FEATURES: This PPA now has a issue tracker:
-https://deb.sury.org/#bug-reporting
-
-CAVEATS:
-1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
-2. If you are using apache2, you are advised to add ppa:ondrej/apache2
-3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
-   or ppa:ondrej/nginx
-
-PLEASE READ: If you like my work and want to give me a little motivation, please consider donating regularly: https://donate.sury.org/
-
-WARNING: add-apt-repository is broken with non-UTF-8 locales, see
-https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
-
-# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
- More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
-Press [ENTER] to continue or Ctrl-c to cancel adding it.
-
-Hit:1 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
-Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
-Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
-Reading package lists... Done
-E: Release file for http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease is not valid yet (invalid for another 11h 1min 7s). Updates for this repository will not be applied.
-E: Release file for http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease is not valid yet (invalid for another 11h 2min 12s). Updates for this repository will not be applied.
-E: Release file for http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease is not valid yet (invalid for another 9h 12min 24s). Updates for this repository will not be applied.
-
-```
 **Step 4**<br>
-Then I ran the command ```sudo apt-get update``` so your package manager can see the newly listed packages.<br>
-I did a rerun on the ```apt-get``` command for the reason of updating it just as the name signifies.
-```
-vagrant@ubuntu-focal:~$ sudo apt-get update
-Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
-Hit:2 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease
-Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
-Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
-Reading package lists... Done
-E: Release file for http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease is not valid yet (invalid for another 11h 0min 41s). Updates for this repository will not be applied.
-E: Release file for http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease is not valid yet (invalid for another 11h 1min 47s). Updates for this repository will not be applied.
-E: Release file for http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease is not valid yet (invalid for another 9h 11min 59s). Updates for this repository will not be applied.
+I needed to check that every package I had installed was up and running. <br>
 
-```
+![step4](https://user-images.githubusercontent.com/108562214/196837153-c3d0dc17-4c9f-4319-8679-450969b8c4e1.PNG)
+
 **Step 5**<br>
 Then I began my installation of my PHP version 7.4, using the command ```sudo apt -y install php7.4```.
-```
-vagrant@ubuntu-focal:~$ sudo apt -y install php7.4
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-php7.4 is already the newest version (1:7.4.30-5+ubuntu20.04.1+deb.sury.org+1).
-0 upgraded, 0 newly installed, 0 to remove and 16 not upgraded.
-```
+
+![step 5](https://user-images.githubusercontent.com/108562214/196837713-8ea3b3d9-ba86-48b8-bf7f-9b21bb2372c0.PNG)
+
+
 
 That was how I successfuly installed.
 
