@@ -10,50 +10,11 @@ vagrant@ubuntu-focal:/$ sudo groupadd engineering
 vagrant@ubuntu-focal:/$
 ```
 ##Adding admin group to sudoers##<br>
-```
-vagrant@ubuntu-focal:~$ sudo cat /etc/sudoers
-#
-# This file MUST be edited with the 'visudo' command as root.
-#
-# Please consider adding local content in /etc/sudoers.d/ instead of
-# directly modifying this file.
-#
-# See the man page for details on how to write a sudoers file.
-#
-#
-# This file MUST be edited with the 'visudo' command as root.
-#
-# Please consider adding local content in /etc/sudoers.d/ instead of
-# directly modifying this file.
-#
-# See the man page for details on how to write a sudoers file.
-#
-Defaults        env_reset
-Defaults        mail_badpass
-Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 
-# Host alias specification
+![sudoers 1](https://user-images.githubusercontent.com/108562214/196829531-bd02cf6a-0eaa-4559-a151-32fbecdf4650.PNG)
 
-# User alias specification
 
-# Cmnd alias specification
-
-# User privilege specification
-root    ALL=(ALL:ALL) ALL
-
-# Members of the admin group may gain root privileges
-%admin ALL=(ALL) ALL
-
-# Allow members of group sudo to execute any command
-%sudo   ALL=(ALL:ALL) ALL
-
-# See sudoers(5) for more information on "#include" directives:
-
-#includedir /etc/sudoers.d
-
-```
-
-##Creating a user in each of the groups##<br>
+## Creating a user in each of the groups##<br>
 ```
 vagrant@ubuntu-focal:~$ sudo useradd -g admin -m -s /bin/bash child_admin
 vagrant@ubuntu-focal:~$
@@ -61,15 +22,13 @@ vagrant@ubuntu-focal:~$ sudo useradd -g support -m -s /bin/bash child_support
 vagrant@ubuntu-focal:~$
 vagrant@ubuntu-focal:~$ sudo useradd -g engineering -m -s /bin/bash child_engineering
 vagrant@ubuntu-focal:~$
-vagrant@ubuntu-focal:~$ cat /etc/passwd | grep child
-child_admin:x:1005:116::/home/child_admin:/bin/bash
-child_support:x:1006:1003::/home/child_support:/bin/bash
-child_engineering:x:1007:1004::/home/child_engineering:/bin/bash
-vagrant@ubuntu-focal:~$
 
 ```
+![child1](https://user-images.githubusercontent.com/108562214/196831513-ea715b3b-9ec2-4099-b694-085d3967d553.PNG)
 
-## Generating  SSH keys for the user in the admin group##<br>
+
+## Generating  SSH keys for child_admin(user) in the admin group##<br>
+
 ```
 To generate SSH keys for child_admin(user) in the admin group, do this:<br>
 
@@ -78,31 +37,8 @@ New password:
 Retype new password:
 passwd: password updated successfully
 
-child_admin@ubuntu-focal:/home/vagrant$ sudo su child_admin
-
-
-child_admin@ubuntu-focal:/home/vagrant$ ssh-keygen
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/child_admin/.ssh/id_rsa):
-Created directory '/home/child_admin/.ssh'.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/child_admin/.ssh/id_rsa
-Your public key has been saved in /home/child_admin/.ssh/id_rsa.pub
-The key fingerprint is:
-SHA256:0ei47IboUAeL8vtShUlNYCpSi/63QZnmw/ynpODtrVc child_admin@ubuntu-focal
-The key's randomart image is:
-+---[RSA 3072]----+
-|  . o+.          |
-| o +. .  o       |
-|+ +. o  o .      |
-|oo oo +o .       |
-|o.o .*. S        |
-|.o..B. . E       |
-|. .= Oo..        |
-| .+.=.X. .       |
-| .o+oB++o        |
-+----[SHA256]-----+child_admin@ubuntu-focal:/home/vagrant$ sudo su child_admin
-
-
 ```
+![child key-gen](https://user-images.githubusercontent.com/108562214/196832241-42349799-8739-49e0-9a76-dbab4b2f0b30.PNG)
+
+
+
