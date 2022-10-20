@@ -14,10 +14,7 @@ When it is done, it will appear as a Oracle VM virtual Box Manager, based on the
 The User Account Control is then prompted asking if you want the file to make changes to your system, of which you click the option ```YES```
 Give the virtual machine whatever name you have in mind, something descriptive, create a folder for the machine that you can easily have access to located on the RAM of your local machine, and choose ```Ubuntu (64-bit)``` as the type of Operating System (OS) amongst the several options present.
 
-```
-![setup](https://user-images.githubusercontent.com/108562214/186910150-977e2c7b-9c52-4f66-8479-a22814ef71a2.png)
 
-```
 The Ubuntu 20.04 LTS will download in your local machine to ensure that you receive any updates that are given. Any other applications without the LTS will become outdated with time.
 
 **Step 2**<br>
