@@ -125,6 +125,18 @@ In the nano file, put in the following: <br>
 ```
 <br>
 I reset my domain name, for the file to become like the screenshot below:<br>
+ ![sites](https://user-images.githubusercontent.com/108562214/197436708-a0c4f7ea-0ba5-43e4-b4d4-735df99e5d4d.PNG)
+<br> <br>
+
+Then enable the new configuration, ```sudo a2ensite domainname.conf```.
+
+**Create an env file**<br>
+Get into the nano shell of .env with ```sudo nano .env``` <br>
+![env 2](https://user-images.githubusercontent.com/108562214/197439231-dcd5c209-25b6-4132-aa8f-b857460e5923.PNG) <br>
+
+
+
+
 
 
 
