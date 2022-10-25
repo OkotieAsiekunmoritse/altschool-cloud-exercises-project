@@ -1,11 +1,11 @@
 
 # HOW TO DEPLOY A LARAVEL APPLICATION USING THE FOLLOWING DEPENDENCIES  <br>
 ```Here I used the following applications to deploy the laravel app:``` <br>
-**i   Apache2** <br>
-**ii  MYSQL** <br>
-**iii PHP** <br>
-**iv  COMPOSER** <br>
-**v   GIT** <br>
+**Apache2** <br>
+**MYSQL** <br>
+**PHP** <br>
+**COMPOSER** <br>
+**GIT** <br>
 <br>
 
 ## Create a domain name and use a cloud instance or droplet <br>
