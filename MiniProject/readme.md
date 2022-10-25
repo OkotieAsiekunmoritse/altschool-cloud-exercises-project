@@ -8,7 +8,7 @@
 **GIT** <br>
 <br>
 
-## Create a domain name and use a cloud instance or droplet <br>
+## Create a domain name and connect it to a cloud instance or droplet <br>
 I created this using the Digital Ocean platform and after going through the necessary requirements for the creation, I was given a registered domain name form namecheap platform which i linked to my droplet in digital ocean. <br><br>
 ![My domain name and droplet from Digitalocean](https://user-images.githubusercontent.com/108562214/197428690-95321bc1-de09-4819-b946-672df9905a98.PNG)
 <br>
