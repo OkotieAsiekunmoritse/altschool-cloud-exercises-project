@@ -115,10 +115,14 @@ Disable default Apache configuration.
 **5. Install Composer** <br>
 Note you should install your PHP first before installing the composer.<br>
 Run the following commands on your terminal:<br>
-```php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"``` <br>
-```php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') {      echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"``` <br>
-```php composer-setup.php``` <br>
-```php -r "unlink('composer-setup.php');"``` <br><br>
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" <br>
+php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') {      echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" <br>
+php composer-setup.php``` <br>
+php -r "unlink('composer-setup.php');" <br>
+
+```
+<br>
 
 Put the composer.phar into a directory on your PATH, so you can simply call composer from any directory (Global install)<br>
 ```sudo mv composer.phar /usr/local/bin/composer```<br>
