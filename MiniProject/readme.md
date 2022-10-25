@@ -34,21 +34,30 @@ Note that you should use ```sudo``` when running these commands especially when 
 Set up Uncomplicated Firewall (UFW) with Apache to allow public access on default web ports for HTTP and HTTPS<br>
 Input ```sudo ufw app list``` for a non root user <br>
 Enable te following:<br>
-```sudo uff allow SSH``` <br>
-```sudo ufw allow 'OpenSSH'``` <br>
-```sudo ufw allow 'WWW Full'``` <br>
+```
+sudo ufw allow SSH <br>
+sudo ufw allow 'OpenSSH' <br>
+sudo ufw allow 'WWW Full' <br>
 
-Then ```sudo systemctl status apache2``` <br>
+``` 
+<br>
+
+Then run the command ```sudo systemctl status apache2``` <br>
 ![apache2 status](https://user-images.githubusercontent.com/108562214/197430072-89ec9f72-0a85-494b-a650-38c93103c6e8.PNG) <br><br>
 
 **3. Install MySql** <br>
 Follow these commands: <br>
-```wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb``` <br>
-```sudo apt update``` <br>
-```sudo apt install mysql-server``` <br><br>
+```
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb <br>
+sudo apt update <br>
+sudo apt install mysql-server<br>
 
-Then you will see the status of mysql with ```sudo service mysql status```<br>
-![mysql status](https://user-images.githubusercontent.com/108562214/197430382-7bb227ba-d960-49e3-b384-0423d5a7aedb.PNG)
+``` 
+<br>
+
+Check for the status of mysql,<br>
+Run the command ```sudo service mysql status```<br>
+![mysql status](https://user-images.githubusercontent.com/108562214/197430382-7bb227ba-d960-49e3-b384-0423d5a7aedb.PNG)<br>
 
 **Secure Mysql** <br>
 ```sudo mysql_secure_installation``` <br>
@@ -59,21 +68,30 @@ Then you will see the status of mysql with ```sudo service mysql status```<br>
 
 
 **4 Install PHP** <br>
-Input ```sudo apt -y install lsb-release apt-transport-https ca-certificates``` <br>
-```sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg``` <br>
+Run the commands <br>
+```
+sudo apt -y install lsb-release apt-transport-https ca-certificates <br>
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg <br>
+
+```
+<br>
  
-Include the PPA to the server packages <br>
-Input ```echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list```<br>
-Update the packages and install PHP  <br>
+**Include the PPA to the server packages** <br>
+Run the command ```echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list```<br>
+**Update the packages and install PHP**  <br>
 Run the command:
-```sudo apt update``` <br>
-```sudo apt install php libapache2-mod-php php8.1-mysql php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl -y``` <br>
+```
+sudo apt update<br>
+sudo apt install php libapache2-mod-php php8.1-mysql php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl -y <br>
+
+``` 
+<br>
 
 **Configure PHP** <br>
 Configure PHP for Web Applications by changing some values in php.ini file. <br>
 Run the command<br>
 ```sudo nano /etc/php/8.1/apache2/php.ini``` <br>
-Edit the following in the nano file<br>
+Edit the following in the nano file and save it <br>
 
 ```
 upload_max_filesize = 64M 
@@ -88,7 +106,8 @@ Note:<br>
 Execution time deals with long should a php script run before the server stops it from running <br>
 Max_input_time deals with how long should a user feed a php script before it cuts it off. <br>
 
-Now, restart your Apache for the changes to take effect.<br>
+Now, restart your Apache.<br>
+
 **Configure Apache** <br>
 Disable default Apache configuration.
 ```sudo a2dissite 000-default``` <br>
