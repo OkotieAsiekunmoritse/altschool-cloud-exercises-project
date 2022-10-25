@@ -1,5 +1,5 @@
 
-# HOW TO DEPLOY A LARAVEL APPLICATION USING THE FOLLOWING DEPENDENCIES# <br>
+# HOW TO DEPLOY A LARAVEL APPLICATION USING THE FOLLOWING DEPENDENCIES  <br>
 ```Here I used the following applications to deploy the laravel app:``` <br>
 **1 Apache2** <br>
 **2 MYSQL** <br>
@@ -8,12 +8,24 @@
 **5 GIT** <br>
 <br>
 
-## Create a domain name, and use a cloud instance or droplet ##<br>
+## Create a domain name and use a cloud instance or droplet <br>
 I created this using the Digital Ocean platform and after going through the necessary requirements for the creation, I was given a registered domain name form namecheap platform which i linked to my droplet in digital ocean. <br><br>
 ![My domain name and droplet from Digitalocean](https://user-images.githubusercontent.com/108562214/197428690-95321bc1-de09-4819-b946-672df9905a98.PNG)
 <br>
 
-### Installing the required dependencies for Laravel application ### <br>
+**Setup Initialization**<br>
+Update the packages to the latest version available with the following commands:<br>
+```
+sudo apt update
+sudo apt upgrade
+
+```
+<br>
+
+**Install wget package**<br>
+```sudo apt install wget```
+
+### Installing the Required Dependencies for Laravel Application <br>
 **1. Apache2** <br>
 Input in your terminal ```apt install apache2``` <br>
 Note that you should use ```sudo``` when running these commands especially when you are not int eh root of your machine, to enable full permission or access to your machine. <br>
@@ -39,7 +51,12 @@ Then you will see the status of mysql with ```sudo service mysql status```<br>
 ![mysql status](https://user-images.githubusercontent.com/108562214/197430382-7bb227ba-d960-49e3-b384-0423d5a7aedb.PNG)
 
 **Secure Mysql** <br>
-```sudo mysql_secure_installation``` <br><br>
+```sudo mysql_secure_installation``` <br>
+
+![mysqlinstall1](https://user-images.githubusercontent.com/108562214/197870127-72f151ad-6907-4557-a8ba-936877abe370.PNG)<br>
+![mysql installation2](https://user-images.githubusercontent.com/108562214/197869571-88f13707-963f-4f12-a979-5ac65a93ce84.PNG)<br> <br>
+
+
 
 **4 Install PHP** <br>
 Input ```sudo apt -y install lsb-release apt-transport-https ca-certificates``` <br>
@@ -80,7 +97,7 @@ Disable default Apache configuration.
 Note you should install your PHP first before installing the composer.<br>
 Run the following commands on your terminal:<br>
 ```php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"``` <br>
-```php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"``` <br>
+```php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') {      echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"``` <br>
 ```php composer-setup.php``` <br>
 ```php -r "unlink('composer-setup.php');"``` <br><br>
 
@@ -123,16 +140,31 @@ In the nano file, put in the following: <br>
  </VirtualHost>
 
 ```
-<br>
-I reset my domain name, for the file to become like the screenshot below:<br>
- ![sites](https://user-images.githubusercontent.com/108562214/197436708-a0c4f7ea-0ba5-43e4-b4d4-735df99e5d4d.PNG)
-<br> <br>
+Ensure that the document root and directory are the same. In my shell, I put in the path which I had rightfully created my document 
+root, and it meant I had to remove the ```html```from both the document root and the directory. I used my domain name as well.<br>
+Save and close the file when done.<br>
+![sites(coreect1)](https://user-images.githubusercontent.com/108562214/197877886-4141da15-43ae-4498-ab1b-7ad4451be28e.PNG) <br>
 
-Then enable the new configuration, ```sudo a2ensite domainname.conf```.
+Then enable the new configuration, ```sudo a2ensite domainname.conf```. <br>
 
 **Create an env file**<br>
 Get into the nano shell of .env with ```sudo nano .env``` <br>
-![env 2](https://user-images.githubusercontent.com/108562214/197439231-dcd5c209-25b6-4132-aa8f-b857460e5923.PNG) <br>
+Save and close the file when done<br>
+![env(real1)](https://user-images.githubusercontent.com/108562214/197868982-99e7bcda-b670-469a-9202-27cd34de620a.PNG)<br>
+
+Then enable the new configuration by typing the command, ``` sudo a2ensite domainname.conf``` <br>
+
+**Check that the application has been deployed**<br>
+Checking with domain name<br>
+Open your browser, put in your domain name or your ip address, to be sure that it has actually deployed to the laravel application.<br>
+In the url input ```your_domainname``` like i did, and got into the laravel application.<br>
+![Laravel pg with https after securing an SSL certificate](https://user-images.githubusercontent.com/108562214/197883757-3efcab96-57da-4679-b4f1-1e96555c80d4.PNG)<br>
+
+Checking with Ipaddress<br>
+![laravel with ip address](https://user-images.githubusercontent.com/108562214/197883973-f39dc78c-4ee0-43aa-88db-cf16504db2c6.PNG)<br>
+
+
+
 
 
 
