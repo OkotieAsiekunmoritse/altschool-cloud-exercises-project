@@ -1,11 +1,11 @@
 
 # HOW TO DEPLOY A LARAVEL APPLICATION USING THE FOLLOWING DEPENDENCIES  <br>
 ```Here I used the following applications to deploy the laravel app:``` <br>
-**1 Apache2** <br>
-**2 MYSQL** <br>
-**3 PHP** <br>
-**4 COMPOSER** <br>
-**5 GIT** <br>
+**i   Apache2** <br>
+**ii  MYSQL** <br>
+**iii PHP** <br>
+**iv  COMPOSER** <br>
+**v   GIT** <br>
 <br>
 
 ## Create a domain name and use a cloud instance or droplet <br>
@@ -163,9 +163,12 @@ In the url input ```your_domainname``` like i did, and got into the laravel appl
 Checking with Ipaddress<br>
 ![laravel with ip address](https://user-images.githubusercontent.com/108562214/197883973-f39dc78c-4ee0-43aa-88db-cf16504db2c6.PNG)<br>
 
+**NOTE** <br>
+When comparing both urls, you would notice that connections to my web server for my domainname is ```https`` which means it is secured are secured,while that of the ipaddress id ``http``` which states that is not secure.<br>
+The domanname is safe because I secured the SSL certificate before deploying while I didnt do same for the Ipaddress. Research also shows that it is better to use a domain name to deploy safely than an Ipaddress. <br>
 
-
-
+**Conclusion** <br>
+The journey to accpomplish this prject was not an easy one, it took a lot of research, reading and practice to get to the final output, I hope this can help anyone get theirs as well. <br>
 
 
 
