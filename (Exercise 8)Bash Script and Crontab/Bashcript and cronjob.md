@@ -1,4 +1,6 @@
 #  HOW TO USE A BASH SCRIPT AND SCHEDULE A CRONJOB WITH CRONTAB  #
+![bash image](https://user-images.githubusercontent.com/108562214/198398477-b3102f8f-980c-417d-a569-b8d20fb3dcf3.PNG)
+
 ## THE CONCEPT OF BASH SCRIPT ##
 ### What Is Bash Script and How Does it Function ###
 Firstly note that a script is what tells the computer what instructions to follow or say. While bash script instructs the bash shell on what to do. A bash script is a plain text file which contains a series of commands.
