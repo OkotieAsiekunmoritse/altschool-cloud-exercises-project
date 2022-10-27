@@ -1,4 +1,6 @@
 # MORE IMPORTANT LINUX COMMANDS #
+![linux image](https://user-images.githubusercontent.com/108562214/198393777-a3456580-90da-4484-aff9-f70aa0a90b5c.PNG)
+
 **1. Cal** <br>
 This command is used to display a calendar on the system, showcasing the specified month or year
 
