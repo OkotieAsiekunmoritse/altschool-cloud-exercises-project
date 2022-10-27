@@ -1,4 +1,6 @@
 # MY PERSONAL STEP-BY-STEP PREOCEDURE TO INSTALL Ubuntu 20.04 USING VIRTUAL BOX AND VAGRANT #
+![vagndubu image](https://user-images.githubusercontent.com/108562214/198393345-b7d80783-2ebc-4f69-a219-6487588ed066.PNG)
+
 **This installation/procedure was carried out on my windows 7 Machine**<br>
 Before I began installation, I had done some research and realized that not all systems  have their virtualization enabled by default.
 Checked my system BIOS and had to enable it from advanced option and saved in order for the system to reboot.
