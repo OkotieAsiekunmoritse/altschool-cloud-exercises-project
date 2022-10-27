@@ -1,5 +1,7 @@
 
 # HOW TO DEPLOY A LARAVEL APPLICATION USING THE FOLLOWING DEPENDENCIES  <br>
+![laravel pic](https://user-images.githubusercontent.com/108562214/198387328-afa08e09-d58c-463e-a09f-d351ddab1541.PNG)
+
 ```Here I used the following applications to deploy the laravel app:``` <br>
 **Apache2** <br>
 **MYSQL** <br>
