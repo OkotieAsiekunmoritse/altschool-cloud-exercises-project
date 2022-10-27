@@ -1,4 +1,4 @@
- # All Exercises For Altschool-Cloud-Exercises-Project #
+ # Summary of All Exercises For 2nd Semester in Cloud Engineering #
  
 ## A Breakdown of Each Exercise and How I Titled them on my Repository ##
 (NOTE: Exercises 5 and 7 were to be solely done for practice and not to besubmitted, hence they were not included)<br>
