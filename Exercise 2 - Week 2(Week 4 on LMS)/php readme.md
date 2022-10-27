@@ -1,7 +1,5 @@
 ## How I Installed my PHP 7.4 version on my Ubuntu 20.04 ##
-
-![php-image (1)](https://user-images.githubusercontent.com/108562214/187519023-88db7ed0-2af0-4445-91c0-cfeb4b6e63f6.jpg)
-
+![php i,age](https://user-images.githubusercontent.com/108562214/198392175-f6e5a573-5b37-4751-9b99-05549844187d.PNG)
 
 
 Follow me on another interesting journey as I install PHP version 7.4 on my Ubuntu local environment.<br>
