@@ -1,4 +1,5 @@
 # HOW TO GET YOUR ANSIBLE PLAYBOOK RUNNING, WITH APACHE2, PYTHON3 AND ANSIBLE #
+![ansible apache imagee](https://user-images.githubusercontent.com/108562214/198389371-e8c561a1-5209-486b-b5ba-903cb7a81fde.PNG)
 
 ## STEP BY STEP PROCEDURE ##
 * Run the following commands as a ```sudo``` user to get the right permissions to be able to achieve this task. <br>
