@@ -1,4 +1,6 @@
 # Calculation of  Network IP, Number of hosts, Range of IP addresses and Broadcasting of an IP from a Specific Subnet #
+![ip image](https://user-images.githubusercontent.com/108562214/198391137-6e9388d6-a8bb-49d1-85f5-169795dc16e8.PNG)
+
 
 ## Calculating the IP and Subnet of 193.16.20.35/29 ##
 
