@@ -1,0 +1,11 @@
+php_version: 8.0
+username: ubuntu
+server_root_document: "/var/www/html"
+nameOfServer: asiekunmoritse
+nameOfVhost: Exam
+
+db_user: moritse1
+db_name: myData1
+db_password: moritse@2
+
+
