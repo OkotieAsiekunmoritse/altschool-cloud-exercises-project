@@ -1,0 +1,318 @@
+- name: Setup and update cache and Full system update
+  apt: 
+    upgrade: dist 
+    update_cache: yes
+
+- name: Add php repo ppa:ondrej/php
+  apt_repository:
+        repo: 'ppa:ondrej/php'
+
+# Install PHP and its Dependencies 
+
+- name: install php mb
+  apt: 
+    name: php8.0 -mbstring 
+    state: latest
+
+- name: install php8.0
+  apt:
+    name: php8.0
+    state: latest
+
+- name: install php-xml
+  apt: 
+    name: php-xml 
+    state: latest
+
+- name: Install unzip
+  apt: 
+    name: unzip 
+    state: latest
+
+- name: install php-composer from site
+  get_url:
+    url: https://getcomposer.org/installer
+    dest: /tmp/installer
+
+- name: install composer
+  shell: cat /tmp/installer | php -- --install-dir=/usr/local/bin
+  args:
+    creates: /usr/local/bin/composer
+
+- name: change composer.phar to composer
+  shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer
+  args:
+    creates: /usr/local/bin/composer
+
+- name: make composer executable
+  file: 
+    path: /usr/local/bin/composer
+    mode: a+x
+    state: file
+
+- name: install apache2 
+  apt:
+     name: apache2
+     state: present
+
+
+- name: install lamp stack
+  apt:
+    package:
+      - php8.0-mysql
+      - php8.0-curl
+      - php8.0-cgi
+      - php8.0-xsl
+      - php8.0-gd
+      - php8.0-mbstring
+      - php8.0-zip
+      - php8.0-xmlrpc
+      - php8.0-soap
+      - php8.0-intl
+      - libapache2-mod-php
+    state: present
+    update_cache: yes 
+
+#Install Mysql and its Dependencies
+- name: Install MySQL server
+  shell: apt-get -y install mysql-server
+
+- name: Install MySQL client
+  shell: apt-get -y install mysql-client
+
+- name: pip install mysqlclient
+  shell: pip install mysqlclient
+
+- name: Start the MySQL service 
+  service: 
+    name: mysql 
+    state: started
+
+
+- name: install python, pip etc
+  shell: apt-get -y install "{{ item }}"
+  with_items:
+    - pip
+    - python3-dev
+    - default-libmysqlclient-dev
+    - build-essential
+
+
+- name: copy .my.cnf file with root password credentials
+  template: 
+    src: /home/ian/Ansible/playbooks/shared/my.cnf.j2 
+    dest: /root/.my.cnf 
+    owner: root 
+    mode: "0600"
+
+# Install Mysql and its Dependencies
+- name: install Msql
+  package:
+      name: "{{item}}"
+      update_cache: yes
+      state: present
+  loop:
+    - mysql-server
+    - mysql-client
+    - python3-mysqldb
+    - libmysqlclient-dev
+  become: true
+  
+  # Start the mysql service
+- name: start mysql 
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+
+# Create db for mysql
+- name: create mysql db
+  mysql_db: 
+    name: myData1
+    state: present
+
+- name: create mysql user
+  mysql_user:
+      name: moritse1
+      password: moritse@2
+      priv: '*.*: ALL'
+      state: present
+
+- name: Enable remote login to mysql
+  lineinfile:
+      path: /etc/mysql/mysql.conf.d/mysqld.cnf
+      regexp: '^bind-address'
+      line: 'bind-address = 0.0.0.0'
+      backup: yes
+  notify:
+    - Restart mysql service
+
+- name: Install dependencies for PostgreSQL
+  apt: 
+    name: {{ item }} 
+    update_cache: true 
+    state: latest
+  with_items:
+    - bash
+    - openssl
+    - libssl-dev
+    - libssl-doc
+ 
+ #Install PostgreSQL service
+- name: Install PostgreSQL 
+  apt: 
+    name: {{ item }} 
+    update_cache: true 
+    state: present
+  with_items:
+    - postgresql
+    - postgresql-contrib
+    - libpq-dev
+    - python3-psycopg2
+
+- name: Ensure the PostgreSQL service is running
+  service: 
+    name: postgresql 
+    state: started 
+    enabled: yes
+
+- name: Create the database specified in vars
+  become: true
+  become_user: postgres
+  postgresql_db: 
+    name: myData1
+    template: 'template0'
+    state: present
+ 
+- name: Ensure user has access to the new db
+  become: true
+  become_user: postgres
+  postgresql_user: 
+    db: moritse1
+    name: myData1
+    password: moritse@2
+    priv: ALL
+    state: present
+  
+- name: Ensure user checks all permissions
+  become: true
+  become_user: postgres
+  postgresql_user: 
+    name: moritse1
+    role_attr_flags: NOSUPERUSER,NOCREATEDB
+    state: present
+
+- name: remove {{ nameOfServer }}
+  shell: sudo rm -rf /var/www/html/asiekunmoritse/
+
+- name: clone laravel code from github
+  git: >
+    repo: https://github.com/f1amy/laravel-realworld-example-app.git
+    dest: /var/www/html/asiekunmoritse
+    clone: yes
+    update: no
+  become: true
+  
+- name: move laravelrepository
+  shell: sudo mv -f /opt/asiekunmoritse /var/www/html/asiekunmoritse/
+
+- name: copy to bash script environment
+  template: 
+    src: bash 
+    dest: "/var/www/html/asiekunmoritse/bashscript.sh"
+  
+- name: start bash script
+  shell: sh /var/www/html/asiekunmoritse/bashscript.sh -y
+  
+- name: permission for composer install
+  shell: sudo chmod -R 777 /var/www/html/asiekunmoritse/
+
+- name: remove default web1 from routes
+  shell: sudo rm -rf /var/www/html/asiekunmoritse/routes/web.php
+
+- name: create web.php in routes
+  template: src=webfile dest="/var/www/html/asiekunmoritse/routes/web.php"
+
+- name: Composer install
+  become: false
+  composer:
+    command: install 
+    global_command: false  
+    working_dir: /var/www/html/asiekunmoritse/
+
+
+- name: Change permission
+  shell: sudo chown -R www-data:www-data /var/www/html/asiekunmoritse/
+
+- name: Change permission for storage
+  shell: sudo chmod -R 775 /var/www/html/asiekunmoritse/storage
+
+- name: Create .env file from env.example file
+  template: 
+    src: env.example 
+    dest: "/var/www/html/asiekunmoritse/.env"
+
+- name: Change file permission
+  shell: sudo chmod 777 /var/www/html/asiekunmoritse/artisan
+
+- name: Create artisan key
+  shell: php /var/www/html/asiekunmoritse /artisan key:generate
+
+- name: start mysql service
+  service: 
+    name: mysql 
+    state: restarted
+
+- name: install drivers
+  shell: sudo apt-get install php-mysql -y
+  become: true
+
+- name: install sqlite
+  shell: sudo apt-get install php-sqlite3 -y
+  become: true
+
+- name: update and upgrade
+  shell: sudo apt update && sudo apt upgrade -y
+  become: true
+
+- name: clear cache
+  shell: sudo systemctl reload apache2
+  become: true
+
+- name: start migration run process
+  shell: sudo php /var/www/html/asiekunmoritse/artisan migrate
+  become: true
+
+- name: Remove default apache vhost config from sites-enabled
+  file: 
+    name: /etc/apache2/sites-enabled/000-default.conf 
+    state: absent
+
+- name: Create apache vhosts for  domain
+  template: 
+    src: webconf 
+    dest: /etc/apache2/sites-available/asiekunmoritse.conf 
+
+- name: permission for laravel conf file
+  shell: sudo chmod -R 777 /etc/apache2/sites-available/asiekunmoritse.conf
+  become: true
+
+- name: Update a2ensite
+  command: a2ensite asiekunmoritse
+
+# Deploy the Laravel page
+- name: Enable the Apache rewrite module
+  command:  a2enmod rewrite
+
+  notify:
+    - restart apache2
+
+- name: Migrate db 
+  shell: |
+    cd /var/www/html/asiekunmoritse
+    php artisan migrate --seed
+  tags: seed
+  become: true
+
+
+

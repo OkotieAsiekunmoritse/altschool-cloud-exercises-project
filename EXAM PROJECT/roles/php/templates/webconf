@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+   ServerName 54.89.85.53
+   ServerAlias 54.89.85.53
+   DocumentRoot /var/www{{vhost_name}}/public
+   
+   <Directory /var/www{{vhost_name}}>/public
+       AllowOverride All
+   </Directory>
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
