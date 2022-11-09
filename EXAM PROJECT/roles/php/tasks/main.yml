@@ -204,7 +204,17 @@
 
 - name: remove nameOfServer
   shell: sudo rm -rf /var/www/html/asiekunmoritse/
+  
+  
+- name: install git and git dependencies
+  apt:
+    name: git
+    state: present
 
+- name: print git version
+  debug:
+    msg: "This is Git {{git_version}}"
+     
 - name: clone laravel code from github
   git: >
     repo: https://github.com/f1amy/laravel-realworld-example-app.git
