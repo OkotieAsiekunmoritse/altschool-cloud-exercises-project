@@ -2,7 +2,7 @@ php_version: 8.0
 username: ubuntu
 server_root_document: "/var/www/html"
 nameOfServer: asiekunmoritse.me
-nameOfVhost: asiekunmoritse.me
+
 
 db_user: moritse
 db_name: moritse
