@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+# Create and install the file repository configuration
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+sudo apt install -y gnupg2
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+# Import the repository signing key
+
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+# Update the package lists
+
+sudo apt update && sudo apt upgrade 
+
+# Install the latest version of PostgreSQL
+# If you want a specific version, use 'postgresql-15' or similar instead of 'postgresql'
+
+sudo apt -y install postgresql-15
+sudo apt install postgresql postgresql-contrib -y
+sudo apt install postgresql postgresql-client -y
+sudo systemctl start postgresql.service
+sudo -i -u postgres psql -c "CREATE DATABASE moritse WITH ENCODING 'UTF8' TEMPLATE template0;"
+sudo -i -u postgres psql -c "CREATE USER moritse WITH ENCRYPTED PASSWORD 'moritse';"
+sudo -i -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE moritse to moritse;"
+cd /
+sudo -u postgres psql -c"ALTER user postgres WITH PASSWORD 'postgres'"
+sudo systemctl restart postgresql
+

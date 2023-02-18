@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+   Server@admin admin@asiekunmoritse.me 
+   ServerName asiekunmoritse.me
+   ServerAlias www.asiekunmoritse.me
+   DocumentRoot /var/www/html/asiekunmoritse/public
+   
+   <Directory /var/www/html/asiekunmoritse/public>
+       AllowOverride All
+       Require all granted
+   </Directory>
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+

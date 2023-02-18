@@ -1,0 +1,13 @@
+  GNU nano 4.8                                         memory_log.sh                                          Modified  # !/bin/bash
+#!/usr/bin/bash
+path=/home/vagrant/memory_logs/log_file.log
+ 
+
+touch ${path}
+
+date >> ${path}
+
+free -h >> ${path}
+
+echo "------" >> ${path}
+
